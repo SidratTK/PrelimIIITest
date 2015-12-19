@@ -6,9 +6,11 @@
 
 preRunVals;
 
+
 for cPos = 1:8
     chooseparams.cPos=cPos;
     SpikeResp={};
+    
     for elec = 1:length(ElectrodeAllDays)   % for all unique electrodes
         electrodeNum = ElectrodeAllDays{elec}.electrodeNum;
         Dates = ElectrodeAllDays{elec}.dates;
@@ -36,4 +38,3 @@ for cPos=1:8
     plot(timex,H(:,cPos),'Color',colj(cPos+1,:));
     hold on; ylim([0 100])
 end
-
